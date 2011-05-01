@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
   	if params[:name]
-  		@posts = Post.where(:name => params[:name]).first
+  		@posts = Post.where(:name => params[:name])
   	else
     	@posts = Post.all
 	end

@@ -4,8 +4,7 @@ Blog::Application.routes.draw do
   end
   
   match 'new_post' => "posts#new"
-  match ':name' => 'posts#index', :as => 'user_posts'
-  
+  match ':name' => 'posts#index', :as => 'user_posts'  
   get "home/index"
 
   # The priority is based upon order of creation:
