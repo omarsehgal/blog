@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
+#	render :text => 'success'
   	if params[:name]
   		@posts = Post.where(:name => params[:name])
   	else

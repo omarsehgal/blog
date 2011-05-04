@@ -27,6 +27,11 @@
   <h2>Tags</h2>
   <%= render :partial => 'tags/form',
              :locals => {:form => post_form} %>
+
+  <div class="field">
+  	<%= post_form.check_box 'terms'%> <%= link_to 'Accept terms of service?', 'http://www.google.com', :target => "_blank", :confirm => "Are u sure you want to read the terms?" %>  	
+  </div>             
+             
   <div class="actions">
     <%= post_form.submit %>
   </div>

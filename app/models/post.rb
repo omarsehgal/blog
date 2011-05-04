@@ -1,6 +1,10 @@
 class Post < ActiveRecord::Base
+	
+	attr_accessor :terms
+	
 	validates :name, :presence => true
 	validates :title, :presence => true, :length => { :minimum => 5 }
+	validates_acceptance_of :terms
 
 	has_many :comments, :dependent => :destroy
 	has_many :tags
